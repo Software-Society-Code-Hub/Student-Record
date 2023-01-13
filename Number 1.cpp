@@ -74,6 +74,24 @@ void update_student() {
   std::cout << "Student not found in database!" << std::endl;
 }
 
+void search_student() {
+  int id;
+  std::cout << "Enter student ID: ";
+  std::cin >> id;
+
+  for (int i = 0; i < students.size(); i++) {
+    if (students[i].id == id) {
+      std::cout << "ID: " << students[i].id << std::endl;
+      std::cout << "Name: " << students[i].name << std::endl;
+      std::cout << "Email: " << students[i].email << std::endl;
+      std::cout << "Phone: " << students[i].phone << std::endl;
+      return;
+    }
+  }
+
+  std::cout << "Student not found in database!" << std::endl;
+}
+
 void view_students() {
   if (students.empty()) {
     std::cout << "No students found in database!" << std::endl;
@@ -94,8 +112,9 @@ int main() {
     std::cout << "1. Add student" << std::endl;
     std::cout << "2. Delete student" << std::endl;
     std::cout << "3. Update student" << std::endl;
-    std::cout << "4. View students" << std::endl;
-    std::cout << "5. Quit" << std::endl;
+    std::cout << "4. Search student" << std::endl;
+    std::cout << "5. View all students" << std::endl;
+    std::cout << "6. Quit" << std::endl;
 
     int choice;
     std::cout << "Enter your choice: ";
@@ -107,9 +126,11 @@ int main() {
       delete_student();
     } else if (choice == 3) {
       update_student();
-    }  else if (choice == 4) {
+	} else if (choice == 4) {
+	 search_student();
+	} else if (choice == 5) {
 	 view_students();
-    } else if (choice == 5) {
+    } else if (choice == 6) {
       break;
     } else {
       std::cout << "Invalid choice!" << std::endl;
