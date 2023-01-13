@@ -74,13 +74,28 @@ void update_student() {
   std::cout << "Student not found in database!" << std::endl;
 }
 
+void view_students() {
+  if (students.empty()) {
+    std::cout << "No students found in database!" << std::endl;
+    return;
+  }
+  
+  for (int i = 0; i < students.size(); i++) {
+    std::cout << "ID: " << students[i].id << std::endl;
+    std::cout << "Name: " << students[i].name << std::endl;
+    std::cout << "Email: " << students[i].email << std::endl;
+    std::cout << "Phone: " << students[i].phone << std::endl;
+    std::cout << std::endl;
+  }
+}
 
 int main() {
   while (true) {
     std::cout << "1. Add student" << std::endl;
     std::cout << "2. Delete student" << std::endl;
     std::cout << "3. Update student" << std::endl;
-    std::cout << "4. Quit" << std::endl;
+    std::cout << "4. View students" << std::endl;
+    std::cout << "5. Quit" << std::endl;
 
     int choice;
     std::cout << "Enter your choice: ";
@@ -92,7 +107,9 @@ int main() {
       delete_student();
     } else if (choice == 3) {
       update_student();
-    } else if (choice == 4) {
+    }  else if (choice == 4) {
+	 view_students();
+    } else if (choice == 5) {
       break;
     } else {
       std::cout << "Invalid choice!" << std::endl;
@@ -101,5 +118,4 @@ int main() {
 
   return 0;
 }
-
 
