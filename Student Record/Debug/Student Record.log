@@ -1,0 +1,6 @@
+﻿  Student Record.cpp
+C:\Users\ronan\source\repos\Student Record\Student Record\Student Record.cpp(41,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ronan\source\repos\Student Record\Student Record\Student Record.cpp(58,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ronan\source\repos\Student Record\Student Record\Student Record.cpp(82,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ronan\source\repos\Student Record\Student Record\Student Record.cpp(101,23): warning C4018: '<': signed/unsigned mismatch
+  Student Record.vcxproj -> C:\Users\ronan\source\repos\Student Record\Debug\Student Record.exe
